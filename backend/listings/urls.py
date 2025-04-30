@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.urls import path
 from django.views.generic.base import RedirectView
-from .views import ListingAPI 
+from django.urls import path, include
 
 urlpatterns = [
-    path('api/listings/', ListingAPI.as_view(), name='listings'),
+    path('api/listings/', include('listings.urls')),
     path('', RedirectView.as_view(url='/api/listings/')),  # Root redirect
 ]

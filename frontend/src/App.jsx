@@ -2,13 +2,13 @@ import React,{ useEffect, useState } from 'react'
 import axios from 'axios'
 import './App.css'
 
-const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = process.env.REACT_APP_API_URL || "https://airbnb-backend-z7nl.onrender.com/api/listings/";
 
 function App() {
   const [listings,setListings] = useState([]);
 
   useEffect(() => {
-    axios.get('https://airbnb-backend-z7nl.onrender.com/api/listings/')
+    axios.get(API_URL)
     .then(res => setListings(res.data))
     .catch(err => console.log(err))
   },[])
