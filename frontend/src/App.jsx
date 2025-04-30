@@ -8,7 +8,7 @@ function App() {
   const [listings,setListings] = useState([]);
 
   useEffect(() => {
-    axios.get(API_URL)
+    axios.get('https://airbnb-backend-z7nl.onrender.com/api/listings/')
     .then(res => setListings(res.data))
     .catch(err => console.log(err))
   },[])
