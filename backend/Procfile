@@ -1,1 +1,1 @@
-web: gunicorn airbnb_scraper.wsgi
+web: gunicorn backend.airbnb_scraper.wsgi
