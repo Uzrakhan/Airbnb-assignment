@@ -1,1 +1,1 @@
-web: gunicorn backend.airbnb_scraper.wsgi
+web: gunicorn airbnb_scraper.wsgi --pythonpath backend

@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-%t*_s^ue+&n30fm6ovrm%ubdz1um8l!*fw4cw*tco+jjk)%--%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://airbnb-backend-z7nl.onrender.com', 'http://localhost:8000/']
 
 # Database configuration
 DATABASES = {
