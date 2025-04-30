@@ -28,10 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['airbnb-backend-z7nl.onrender.com', 'http://localhost:8000']
 
-# Database configuration
-DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
-}
 
 # Application definition
 
