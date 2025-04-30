@@ -104,10 +104,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True  # Add this line (remove later)
+
 CORS_ALLOWED_ORIGINS = [
     'https://airbnb-assignment-pink.vercel.app',  # Frontend URL
     'http://localhost:3000'
 ]
+
 
 
 # Internationalization

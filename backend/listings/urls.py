@@ -18,5 +18,5 @@ from django.urls import path
 from .views import ListingAPI 
 
 urlpatterns = [
-    path('api/listings/', ListingAPI.as_view(), name='listings'),
+    path('/api/listings/', ListingAPI.as_view(), name='listings'),
 ]
