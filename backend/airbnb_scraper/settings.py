@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-%t*_s^ue+&n30fm6ovrm%ubdz1um8l!*fw4cw*tco+jjk)%--%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['airbnb-backend-z7nl.onrender.com', 'http://localhost:8000']
+ALLOWED_HOSTS = ['airbnb-backend-z7nl.onrender.com', 'localhost']
 
 
 # Application definition
@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'airbnb_scraper.urls'
@@ -104,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True  # Add this line (remove later)
+CORS_ALLOW_ALL_ORIGINS = False  # Add this line (remove later)
 
 CORS_ALLOWED_ORIGINS = [
     'https://airbnb-assignment-pink.vercel.app',  # Frontend URL
@@ -128,7 +128,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 # Static files
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

@@ -15,8 +15,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
+from django.views.generic.base import RedirectView
 from .views import ListingAPI 
 
 urlpatterns = [
-    path('/api/listings/', ListingAPI.as_view(), name='listings'),
+    path('api/listings/', ListingAPI.as_view(), name='listings'),
+    path('', RedirectView.as_view(url='/api/listings/')),  # Root redirect
 ]
