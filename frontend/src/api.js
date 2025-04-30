@@ -1,0 +1,1 @@
+const API_URL = 'https://airbnb-backend-z7nl.onrender.com/api/listings/'

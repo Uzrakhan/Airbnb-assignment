@@ -6,7 +6,7 @@ function App() {
   const [listings,setListings] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/listings/')
+    axios.get(API_URL)
     .then(res => setListings(res.data))
     .catch(err => console.log(err))
   },[])
